@@ -101,3 +101,84 @@
 
     .card {
       background: rgba(255,255,255,0.82);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      border-radius: 12px;
+      padding: 18px 20px;
+      box-shadow: 0 4px 14px rgba(0,0,0,.18);
+      margin-bottom: 22px;
+    }
+
+    .card p { color: #2b2b2b; line-height: 1.55; }
+
+    .contact-line {
+      font-weight: bold;
+      margin: 6px 0;
+    }
+
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.2);
+      padding: 12px;
+      text-align: center;
+      background: rgba(0,0,0,0.5);
+      font-size: .85rem;
+      color: #f5f5f5;
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="hero-header">
+  <h1>Jerry's Leather Crafts</h1>
+  <p>Handcrafted Leather Goods · Custom Made in the USA</p>
+
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="wine-boxes.html">Wine Boxes</a></li>
+      <li><a href="belts.html">Belts</a></li>
+      <li><a href="field-gear.html">Field & Outdoor</a></li>
+      <li><a href="canvas-edc.html">Canvas & Everyday Carry</a></li>
+      <li><a href="padfolios.html">Padfolios & Binders</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ABOUT SECTION -->
+  <section class="card">
+    <h2>About Jerry’s Leather Crafts</h2>
+    <p>
+      There’s nothing quite like working with your hands to make something that lasts. At Jerry’s Leather Crafts, we’ve been doing just that for generations. Since our family opened shop in 1999, we’ve stayed family owned and operated, focused on building leather goods that are meant to be used every day, not just looked at.
+    </p>
+    <p>
+      From wine boxes and belts to field gear and padfolios, every piece is cut, tooled, and stitched with the same care we’d put into something for our own family. Many of our designs are rooted in classic Western style, and our Texas roots still show through in the work.
+    </p>
+    <p>
+      Most items can be custom made to suit your style, and we stand behind what we build with <strong>free lifetime repairs</strong> on our products. We have as much pride in our craftsmanship as we do in where we come from, and we hope you can see both in every piece we make.
+    </p>
+  </section>
+
+  <!-- CONTACT INFO -->
+  <section class="card">
+    <h2>Contact Us</h2>
+    <p class="contact-line">Email: <strong>jerrysleathercrafts@msn.com</strong></p>
+    <p class="contact-line">Phone / Text: <strong>(your new number here)</strong></p>
+    <p>Custom orders, repairs, or questions — we usually respond the same day.</p>
+  </section>
+
+</main>
+
+<footer>
+  © <span id="year"></span> Jerry's Leather Crafts
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
