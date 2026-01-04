@@ -191,28 +191,36 @@
   </div>
 
   <!-- Leather Belt -->
-  <div class="product">
-    <img src="images/plain-belt.jpg" alt="Plain Leather Belt">
-    <h3>Leather Belt</h3>
-    <p class="price">$75</p>
-    <div id="paypal-container-belt-plain"></div>
-    <script>
-      paypal.HostedButtons({ hostedButtonId: "EGWEU8XL8UYRW" })
-        .render("#paypal-container-belt-plain");
-    </script>
-  </div>
+<div class="product">
+  <img src="images/plain-belt.jpg" alt="Plain Leather Belt">
+  <h3>Plain Leather Belt</h3>
+
+  <p class="price">$75</p>
+  <p>A clean, everyday leather belt — cut from quality hide and built for years of wear.</p>
+
+  <div id="paypal-container-belt-plain"></div>
+  <script>
+    paypal.HostedButtons({ hostedButtonId: "YOUR_PLAIN_BUTTON_ID" })
+      .render("#paypal-container-belt-plain");
+  </script>
+</div>
+
 
   <!-- Stamped Belt -->
-  <div class="product">
-    <img src="images/tapered-belt.jpg" alt="Tapered Leather Belt">
-    <h3>Stamped Leather Belt</h3>
-    <p class="price">$80</p>
-    <div id="paypal-container-belt-tapered"></div>
-    <script>
-      paypal.HostedButtons({ hostedButtonId: "5N6AFSPWVGYWG" })
-        .render("#paypal-container-belt-tapered");
-    </script>
-  </div>
+<div class="product">
+  <img src="images/stamped-belt.jpg" alt="Stamped Leather Belt">
+  <h3>Stamped Leather Belt</h3>
+
+  <p class="price">$80 — Custom Stamping Available</p>
+  <p>Hand-stamped leather belt with optional name or lettering. Each one is made to order.</p>
+
+  <div id="paypal-container-belt-stamped"></div>
+  <script>
+    paypal.HostedButtons({ hostedButtonId: "YOUR_STAMPED_BUTTON_ID" })
+      .render("#paypal-container-belt-stamped");
+  </script>
+</div>
+
 
 </div>
 
