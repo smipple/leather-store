@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact – Jerry's Leather Crafts</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Contact Jerry's Leather Crafts for custom leather goods, repairs, or orders." />
+
+  <!-- PayPal SDK (safe to leave even if not used here) -->
+  <script 
+    src="https://www.paypal.com/sdk/js?client-id=BAAMKRdaAlAQLYjSkI4CUyJuutBCiisTMADWKlGuJRSkMIcj3STmjzG18qshhaJbnky7vhv_9KYescamd8&components=hosted-buttons&enable-funding=venmo&currency=USD">
+  </script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+
+      background:
+        linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
+        url("images/storefront.png");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    header.hero-header {
+      background-image: linear-gradient(
+        rgba(0,0,0,0.40),
+        rgba(0,0,0,0.40)
+      ),
+      url("images/custom.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #ffffff;
+      text-align: center;
+      padding: 110px 16px 80px;
+    }
+
+    header.hero-header h1 {
+      margin: 0;
+      font-size: 2.4rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    header.hero-header p {
+      margin-top: 8px;
+      font-size: 1rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .main-nav { margin-top: 18px; }
+
+    .main-nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px 18px;
+    }
+
+    .main-nav a {
+      text-decoration: none;
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(0,0,0,0.35);
+      color: #f5f5f5;
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+
+    .main-nav a:hover { background: rgba(0,0,0,0.6); }
+    .main-nav a.active {
+      background: #f5f5f5;
+      color: #2b2b2b;
+      border-color: transparent;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+    }
+
+    h2 {
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-size: 1rem;
+      color: #f5f2ed;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+    }
+
+    .card {
+      background: rgba(255,255,255,0.82);
