@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Reviews – Jerry's Leather Crafts</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Customer reviews and photos of handcrafted leather goods from Jerry's Leather Crafts." />
+
+  <!-- PayPal SDK (ok to leave here for consistency) -->
+  <script 
+    src="https://www.paypal.com/sdk/js?client-id=BAAMKRdaAlAQLYjSkI4CUyJuutBCiisTMADWKlGuJRSkMIcj3STmjzG18qshhaJbnky7vhv_9KYescamd8&components=hosted-buttons&enable-funding=venmo&currency=USD">
+  </script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+
+      background:
+        linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
+        url("images/storefront.png");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    header.hero-header {
+      background-image: linear-gradient(
+        rgba(0,0,0,0.40),
+        rgba(0,0,0,0.40)
+      ),
+      url("images/custom.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #ffffff;
+      text-align: center;
+      padding: 110px 16px 80px;
+    }
+
+    header.hero-header h1 {
+      margin: 0;
+      font-size: 2.4rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    header.hero-header p {
+      margin-top: 8px;
+      font-size: 1rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .main-nav { margin-top: 18px; }
+
+    .main-nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px 18px;
+    }
+
+    .main-nav a {
+      text-decoration: none;
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(0,0,0,0.35);
+      color: #f5f5f5;
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+
+    .main-nav a:hover { background: rgba(0,0,0,0.6); }
+    .main-nav a.active {
+      background: #f5f5f5;
+      color: #2b2b2b;
+      border-color: transparent;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+    }
+
+    h2 {
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-size: 1rem;
+      color: #f5f2ed;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+    }
+
+    h3 {
+      margin-top: 0;
+      color: #4a2f14;
+    }
+
+    p {
+      color: #f5f2ed;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.75);
+    }
+
+    /* Review cards */
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin-top: 16px;
+      margin-bottom: 32px;
+    }
+
+    .review-card {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      border-radius: 12px;
+      padding: 16px 16px 18px;
+      box-shadow: 0 4px 14px rgba(0,0,0,.18);
+    }
+
+    .review-card img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .review-text {
+      color: #2b2b2b;
+      text-shadow: none;
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    .review-name {
+      margin-top: 8px;
+      font-weight: bold;
+      color: #4a2f14;
+      font-size: 0.9rem;
+    }
+
+    .review-meta {
+      font-size: 0.8rem;
+      color: #7a6a5a;
+    }
+
+    /* Leave a review section */
+    .card {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      border-radius: 12px;
+      padding: 18px 20px;
+      box-shadow: 0 4px 14px rgba(0,0,0,.18);
+      margin-bottom: 22px;
+    }
+
+    .card p {
+      color: #2b2b2b;
+      text-shadow: none;
+      line-height: 1.55;
+    }
+
+    .review-links {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .review-links a {
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #8a5a2f;
+      color: #f5f5f5;
+      border: 1px solid rgba(0,0,0,0.15);
+    }
+
+    .review-links a:hover {
+      background: #6e4624;
+    }
+
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.2);
+      padding: 12px;
+      text-align: center;
+      background: rgba(0,0,0,0.5);
+      font-size: .85rem;
+      color: #f5f5f5;
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="hero-header">
+  <h1>Jerry's Leather Crafts</h1>
+  <p>Handcrafted Leather Goods · Custom Made in the USA</p>
+
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="wine-boxes.html">Wine Boxes</a></li>
+      <li><a href="belts.html">Belts</a></li>
+      <li><a href="field-gear.html">Field & Outdoor</a></li>
+      <li><a href="canvas-edc.html">Canvas & Everyday Carry</a></li>
+      <li><a href="padfolios.html">Padfolios & Binders</a></li>
+      <li><a href="reviews.html" class="active">Reviews</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <section>
+    <h2>Customer Reviews</h2>
+    <p>Here are a few pieces out in the wild — photos and feedback from folks who use this gear every day.</p>
+  </section>
+
+  <!-- Example review cards – replace with real content when you have it -->
+  <section class="review-grid">
+
+    <div class="review-card">
+      <img src="images/leather-bird-bags.jpg" alt="Customer photo of leather bird bags">
+      <div class="review-text">
+        “The bird bags are built like tanks. Opening day was wet and muddy and they still cleaned up great. Stitching and hardware are top notch.”
+      </div>
+      <div class="review-name">– J. Martinez</div>
+      <div class="review-meta">Leather Bird Bags</div>
+    </div>
+
+    <div class="review-card">
+      <img src="images/western-style-belt.jpg" alt="Customer photo of western belt">
+      <div class="review-text">
+        “The belt fit perfect right out of the box. The tooling is even nicer in person than in the pictures. This is now my everyday belt.”
+      </div>
+      <div class="review-name">– C. Henderson</div>
+      <div class="review-meta">Custom Western Belt</div>
+    </div>
+
+    <div class="review-card">
+      <img src="images/canvas-dopp-kit.jpg" alt="Customer photo of canvas dopp kit">
+      <div class="review-text">
+        “Bought the canvas dopp kit for travel and ended up using it in the field too. Zipper feels solid and it stands up on its own when open.”
+      </div>
+      <div class="review-name">– R. Collins</div>
+      <div class="review-meta">Canvas Dopp Kit</div>
+    </div>
+
+  </section>
+
+  <!-- How customers can leave their own review -->
+  <section class="card">
+    <h2>Share Your Experience</h2>
+    <p>
+      If you’ve picked up a piece from Jerry’s Leather Crafts, we’d love to see it in use.
+      You can leave a review, share a picture of your gear, or tell us how it’s holding up.
+    </p>
+    <p>
+      Your feedback helps other folks know what they’re getting, and it helps us keep making better gear.
+    </p>
+
+    <div class="review-links">
+  <a href="https://www.yelp.com/biz/jerrys-leather-crafts-kingsville" target="_blank" rel="noopener">
+    Review Us on Yelp
+  </a>
+</div>
+
+  </section>
+
+</main>
+
+<footer>
+  © <span id="year"></span> Jerry's Leather Crafts
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
