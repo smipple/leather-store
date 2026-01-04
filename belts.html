@@ -176,22 +176,46 @@
     <p>Hand-tooled western belts made to fit you right — built for years of wear with traditional patterns, quality leather, and solid hardware.</p>
   </section>
 
-  <section>
-    <div class="products">
+<div class="products">
 
-      <div class="product">
-        <img src="images/western-style-belt.jpg" alt="Custom Western Belt">
-        <h3>Custom Western Belt</h3>
-        <p class="price"></p>
-        <div id="paypal-container-belt"></div>
-        <script>
-          paypal.HostedButtons({ hostedButtonId: "46MKSLH75F8SA" })
-            .render("#paypal-container-belt");
-        </script>
-      </div>
+  <!-- Western Tooled Belt (existing) -->
+  <div class="product">
+    <img src="images/western-style-belt.jpg" alt="Custom Western Belt">
+    <h3>Custom Western Belt</h3>
+    <p class="price"></p>
+    <div id="paypal-container-belt-western"></div>
+    <script>
+      paypal.HostedButtons({ hostedButtonId: "46MKSLH75F8SA" })
+        .render("#paypal-container-belt-western");
+    </script>
+  </div>
 
-    </div>
-  </section>
+  <!-- Plain Leather Belt -->
+  <div class="product">
+    <img src="images/plain-belt.jpg" alt="Plain Leather Belt">
+    <h3>Plain Leather Belt</h3>
+    <p class="price"></p>
+    <div id="paypal-container-belt-plain"></div>
+    <script>
+      paypal.HostedButtons({ hostedButtonId: "PUT_PLAIN_BELT_BUTTON_ID_HERE" })
+        .render("#paypal-container-belt-plain");
+    </script>
+  </div>
+
+  <!-- Tapered Belt -->
+  <div class="product">
+    <img src="images/tapered-belt.jpg" alt="Tapered Leather Belt">
+    <h3>Tapered Leather Belt</h3>
+    <p class="price"></p>
+    <div id="paypal-container-belt-tapered"></div>
+    <script>
+      paypal.HostedButtons({ hostedButtonId: "PUT_TAPERED_BELT_BUTTON_ID_HERE" })
+        .render("#paypal-container-belt-tapered");
+    </script>
+  </div>
+
+</div>
+
 
 </main>
 
