@@ -12,50 +12,154 @@
   </script>
 
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f2ed; color: #333; }
-    header { background: #2b2b2b; color: #f5f2ed; padding: 24px 16px; text-align: center; }
-    header h1 { margin: 0; font-size: 2rem; letter-spacing: .06em; text-transform: uppercase; }
-    main { max-width: 1000px; margin: 0 auto; padding: 24px 16px 40px; }
-    h2 { text-transform: uppercase; letter-spacing: .08em; font-size: 1rem; color: #5c3a1e; }
-.paypal-button img {
-  max-width: 180px;
-  height: auto;
-}
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f2ed;
+      color: #333;
+    }
 
-.products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 22px;
-  margin-bottom: 28px;
-}
+    /* HERO HEADER USING custom.png */
+    header.hero-header {
+      background-image: linear-gradient(
+        rgba(0,0,0,0.40),
+        rgba(0,0,0,0.40)
+      ),
+      url("images/custom.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #ffffff;
+      text-align: center;
+      padding: 110px 16px;
+    }
 
-.product {
-  background: #fff;
-  border-radius: 12px;
-  padding: 18px;
-  box-shadow: 0 3px 10px rgba(0,0,0,.10);
-  text-align: center;
-}
+    header.hero-header h1 {
+      margin: 0;
+      font-size: 2.4rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
 
-.product img {
-  max-width: 360px;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
+    header.hero-header p {
+      margin-top: 8px;
+      font-size: 1rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
 
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+    }
 
-    .price { font-weight: bold; margin: 6px 0 10px; }
-    .email-btn { display:inline-block; margin-top:8px; padding:8px 14px; border-radius:6px; background:#8a5a2f; color:#fff; text-decoration:none; font-weight:bold; }
-    footer { border-top: 1px solid #ddd; padding: 12px; text-align: center; background: #f0ece6; font-size: .85rem; }
+    h2 {
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-size: 1rem;
+      color: #5c3a1e;
+    }
+
+    .paypal-button img {
+      max-width: 180px;
+      height: auto;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 22px;
+      margin-bottom: 28px;
+    }
+
+    .product {
+      background: #fff;
+      border-radius: 12px;
+      padding: 18px;
+      box-shadow: 0 3px 10px rgba(0,0,0,.10);
+      text-align: center;
+    }
+
+    .product img {
+      max-width: 360px;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-weight: bold;
+      margin: 6px 0 10px;
+    }
+
+    .email-btn {
+      display:inline-block;
+      margin-top:8px;
+      padding:8px 14px;
+      border-radius:6px;
+      background:#8a5a2f;
+      color:#fff;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    /* SECTION WITH old.png AS OPAQUE BACKGROUND */
+    .section-old {
+      background-image: linear-gradient(
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.55)
+      ),
+      url("images/old.png");
+      background-size: cover;
+      background-position: center;
+      color: #f5f5f5;
+      padding: 80px 16px;
+      text-align: center;
+      margin: 40px -16px 0 -16px; /* stretch full width inside main */
+    }
+
+    .section-old h2,
+    .section-old p {
+      color: #f5f5f5;
+    }
+
+    /* SECTION WITH tooled.png AS OPAQUE BACKGROUND */
+    .section-tooled {
+      background-image: linear-gradient(
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.55)
+      ),
+      url("images/tooled.png");
+      background-size: cover;
+      background-position: center;
+      color: #f5f5f5;
+      padding: 80px 16px;
+      text-align: center;
+      margin: 40px -16px 0 -16px;
+    }
+
+    .section-tooled h2,
+    .section-tooled p {
+      color: #f5f5f5;
+    }
+
+    footer {
+      border-top: 1px solid #ddd;
+      padding: 12px;
+      text-align: center;
+      background: #f0ece6;
+      font-size: .85rem;
+    }
   </style>
 </head>
 
 <body>
 
-<header>
+<header class="hero-header">
   <h1>Jerry's Leather Crafts</h1>
-  <p>Handcrafted leather goods — built to last</p>
+  <p>Handcrafted Leather Goods · Custom Made in the USA</p>
 </header>
 
 <main>
@@ -83,7 +187,7 @@
 
     <div class="product">
       <img src="images/small-wine-box.jpg" alt="Small Wine Box">
-      <h3>Small Wine Box</h3>
+      <h3>Small Wine Box</hh3>
       <p class="price"></p>
       <div id="paypal-container-small-wine-box"></div>
       <script>
@@ -216,34 +320,15 @@
   </div>
 </section>
 
-<!-- Padfolios & Binders -->
-<section>
-  <h2>Padfolios & Binders</h2>
-  <div class="products">
+<!-- Decorative sections using old and tooled backgrounds -->
+<section class="section-old">
+  <h2>Built to Last</h2>
+  <p>Repairs, restorations, and upgrades for the leather gear you already own.</p>
+</section>
 
-    <div class="product">
-      <img src="images/plain-leather-padfolio.jpg" alt="Plain Leather Padfolio">
-      <h3>Plain Leather Padfolio</h3>
-      <p class="price"></p>
-      <div id="paypal-container-plain-padfolio"></div>
-      <script>
-        paypal.HostedButtons({ hostedButtonId: "VUNZ6KHZJ5JTL" })
-          .render("#paypal-container-plain-padfolio");
-      </script>
-    </div>
-
-    <div class="product">
-      <img src="images/tooled-3-ring-binder.jpg" alt="Tooled 3-Ring Binder">
-      <h3>Tooled 3-Ring Binder</h3>
-      <p class="price"></p>
-      <div id="paypal-container-binder"></div>
-      <script>
-        paypal.HostedButtons({ hostedButtonId: "GS83DBC53WDE2" })
-          .render("#paypal-container-binder");
-      </script>
-    </div>
-
-  </div>
+<section class="section-tooled">
+  <h2>Traditional Leather Tooling</h2>
+  <p>Custom belts, scabbards, holsters and more — each one cut, stamped, and stitched by hand.</p>
 </section>
 
 <section>
@@ -258,7 +343,7 @@
 </footer>
 
 <script>
-document.getElementById("year").textContent = new Date().getFullYear();
+  document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
 </body>
